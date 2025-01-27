@@ -8,16 +8,16 @@ namespace NotBot2.Models
         [Key]
         public int PaymentID { get; set; }
 
-        [Column(TypeName = "nvarchar(100)")]
+        [Column(TypeName = "varchar(100)")]
         public string HolderName { get; set; } = "";
 
-        [Column(TypeName = "nvarchar(16)")]
+        [Column(TypeName = "varchar(16)")]
         public string CardNumber { get; set; } = "";
 
-        [Column(TypeName = "nvarchar(3)")]
+        [Column(TypeName = "varchar(3)")]
         public string SecurityCode {  get; set; } = "";
 
-        [Column(TypeName = "nvarchar(5)")]
+        [Column(TypeName = "varchar(5)")]
         public string ExperationDate { get; set; } = "";
 
     }
