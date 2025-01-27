@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
+using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
 
@@ -14,12 +15,12 @@ namespace NotBot2.Migrations
                 name: "CardPaymentDetails",
                 columns: table => new
                 {
-                    PaymentID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    HolderName = table.Column<string>(type: "nvarchar(100)", nullable: false),
-                    CardNumber = table.Column<string>(type: "nvarchar(16)", nullable: false),
-                    SecurityCode = table.Column<string>(type: "nvarchar(3)", nullable: false),
-                    ExperationDate = table.Column<string>(type: "nvarchar(5)", nullable: false)
+                    PaymentID = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    HolderName = table.Column<string>(type: "varchar(100)", nullable: false),
+                    CardNumber = table.Column<string>(type: "varchar(16)", nullable: false),
+                    SecurityCode = table.Column<string>(type: "varchar(3)", nullable: false),
+                    ExperationDate = table.Column<string>(type: "varchar(5)", nullable: false)
                 },
                 constraints: table =>
                 {
