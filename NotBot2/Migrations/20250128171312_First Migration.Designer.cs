@@ -11,7 +11,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace NotBot2.Migrations
 {
     [DbContext(typeof(CardPaymentDetailContext))]
-    [Migration("20250127161600_First Migration")]
+    [Migration("20250128171312_First Migration")]
     partial class FirstMigration
     {
         /// <inheritdoc />
