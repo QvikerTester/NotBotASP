@@ -1,0 +1,7 @@
+<div *ngIf="cardPaymentDetail">
+  <p>Payment ID: {{ cardPaymentDetail.paymentID }}</p>
+  <p>Holder Name: {{ cardPaymentDetail.holderName || "N/A" }}</p>
+  <p>Card Number: {{ cardPaymentDetail.cardNumber || "N/A" }}</p>
+  <p>Security Code: {{ cardPaymentDetail.securityCode || "N/A" }}</p>
+  <p>Expiration Date: {{ cardPaymentDetail.experationDate || "N/A" }}</p>
+</div>
