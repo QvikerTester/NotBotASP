@@ -7,9 +7,11 @@ import { CardPaymentDetail } from '../interfaces/payment-detail';
   providedIn: 'root',
 })
 export class CardPaymentDetailService {
-  private apiUrl = 'http://localhost:5251/api/CardPaymentDetail/${_id}';
+  private apiUrl = `http://localhost:5251/api/CardPaymentDetail`;
+
   constructor(private http: HttpClient) {}
-  getCardPaymentDetails(): Observable<CardPaymentDetail> {
-    return this.http.get<CardPaymentDetail>(this.apiUrl);
+
+  getCardPaymentDetails(id: number): Observable<CardPaymentDetail> {
+    return this.http.get<CardPaymentDetail>(`${this.apiUrl}/${id}`);
   }
 }

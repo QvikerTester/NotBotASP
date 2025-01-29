@@ -16,7 +16,7 @@ export class CardPaymentDetailComponent implements OnInit {
   constructor(private cardPaymentDetailService: CardPaymentDetailService) {}
 
   ngOnInit(): void {
-    this.cardPaymentDetailService.getCardPaymentDetails().subscribe({
+    this.cardPaymentDetailService.getCardPaymentDetails(1).subscribe({
       next: (data) => (this.cardPaymentDetail = data),
       error: (err) => console.log('Error', err),
     });
